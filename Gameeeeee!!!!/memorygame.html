@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Memory Game</title>
+    <link rel="stylesheet" href="memorygamme.css">
+
+</head>
+<body>
+    <h1><i>🏠 Room Memory Game 🏠</i></h1>
+    
+    <div class="stats">
+        <span class="moves">Moves: 0</span>
+        <span class="timer">Time: 0s</span>
+        <span class="matched">Matched: 0/8</span>
+    </div>
+
+    <div class="game-wrapper">
+        <div class="room" id="room">
+            <div class="room-title">📍 Living Room</div>
+        </div>
+        
+        <div class="objects-container">
+            <div class="objects-title">Hover to Room</div>
+            <div id="objectsList"></div>
+            <div class="controls">
+                <button class="restart-btn" onclick="restartGame()">Restart Game</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="win-message" id="winMessage">
+        <h2>🎉 You Won! 🎉</h2>
+        <p id="finalStats"></p>
+        <button class="restart-btn" onclick="restartGame()" style="margin-top: 20px;">Play Again</button>
+    </div>
+    <script src="memorygammme.js"></script>
+</body>
+</html>
