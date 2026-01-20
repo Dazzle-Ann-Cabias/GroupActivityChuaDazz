@@ -1,0 +1,124 @@
+/* Overall body styling */
+body {
+    margin: 0;
+    height: 100vh;
+    background: #000;
+    font-family: "Cinzel", serif;
+    color: #ddd;
+    overflow: hidden;
+}
+
+/* Buttons, dropdowns, inputs – same vibe lahat */
+button, select, input {
+    background: #0b0b0b;
+    color: #ddd;
+    border: 1px solid #444;
+    padding: 8px 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+/* Slight zoom pag hover */
+button:hover {
+    transform: scale(1.05);
+}
+
+/* ===== HOME SCREEN ===== */
+#home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top, #1a1a1a, #000 70%);
+}
+
+.metal-title {
+    font-size: 64px;
+    letter-spacing: 8px;
+}
+
+.metal-subtitle {
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+}
+
+/* ===== GAME SCREEN ===== */
+#game {
+    display: none; /* nakatago muna */
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    width: 900px;
+    padding: 30px;
+    text-align: center;
+    background: radial-gradient(circle at top, #1a1a1a, #050505 70%);
+    border: 2px solid #333;
+}
+
+/* Scoreboard layout */
+#scoreboard {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 20px;
+}
+
+/* Grid ng boxes */
+#arena {
+    display: grid;
+    gap: 12px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+/* ===== BOX ===== */
+.box {
+    width: 85px;
+    height: 85px;
+    background: linear-gradient(145deg, #1c1c1c, #050505);
+    border: 2px solid #444;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Animation pag pinili yung box */
+.box.lift {
+    transform: translateY(-50px);
+}
+
+/* ===== ORB ===== */
+/* Eto yung bilog na may number 1 */
+.orb {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #fff, #777);
+    box-shadow: 0 0 18px rgba(255,255,255,0.8);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; /* lalabas lang pag reveal */
+    text-align: center;
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #111;
+}
+
+/* ===== WINNER OVERLAY ===== */
+#winnerOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 44px;
+}
+
