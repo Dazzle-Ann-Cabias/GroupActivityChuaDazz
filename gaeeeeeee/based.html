@@ -3,19 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>maze game of chua & dazz</title>
     <link rel="stylesheet" href="design&properties.css"> <!-- gumagana yung css pero same attributes/elements lang yung nakalagay sa bawat div -->
 </head>
 <body>
-
-<!-- THE HOME PAGE NA HINDI GUMAGANAAAA AMP (T-T) -->
-<div id="home">
-<div>
-
-<h1>FIND THE 1 ORB</h1>
-<div style="text-align:center">
-<button onclick="enterGame()">PRESS TO PLAY</button>
-</div>
 
 <!-- LAHAT NG ABOUT SA GAMEEEEEE -->
 <div id="game">
@@ -26,7 +17,7 @@
             <input id="p1Name" placeholder="Player 1">
             <input id="p2Name" placeholder="Player 2">
             <select id="difficulty">
-                <option value="normal">Normal</option>
+                <option value="normal">Easy</option>
                 <option value="hard">Hard</option> 
                 <!-- Sabi nila basic lang daw yung hard mode amputik -->
             </select>
@@ -45,8 +36,6 @@
         <!-- literal na restart lang talaga yung ginagawa -->
         <div id="gameButtons">
             <button onclick="restartGame()">RESTART</button>
-            <button onclick="backToHome()">BACK</button>
-        </div>
     </div>
 </div>
 

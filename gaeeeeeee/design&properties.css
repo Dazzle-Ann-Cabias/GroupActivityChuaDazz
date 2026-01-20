@@ -22,17 +22,7 @@ body {
         background: #1a0000;
         box-shadow: 0 0 15px #800;
     }
-
     /* ===== gumagana yung css sa homepage pero hindi sya nag o-overlay amp ===== */
-    #home {
-        position: absolute;
-        inset: 0;
-        background: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 10;
-    }
 
     #home h1 {
         font-size: 52px;

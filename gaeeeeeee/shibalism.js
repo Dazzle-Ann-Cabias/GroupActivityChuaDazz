@@ -1,7 +1,4 @@
  
- /* nagpatulong sa ai pero ang daming extra code na hindi naman pinapakita sa program haysttttttttt */
- 
- const home = document.getElementById("home");
     const game = document.getElementById("game");
     const arena = document.getElementById("arena");
     const message = document.getElementById("message");
@@ -25,7 +22,7 @@
     let firstRound = true;
     let gameOver = false;
     let timerInterval = null;
-    let timeRemaining = 300; // 5 minutes in seconds
+    let timeRemaining = 300; 
 
     function enterGame() {
         home.style.display = "none";
@@ -58,7 +55,6 @@
         arena.innerHTML = "";
         arena.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
         boxes = [];
- /* merong for kasi linagay ni AI trinay kong palitan ng if, else kaso iba daw yun sa for.....(T-T) */
         for (let i = 0; i < count; i++) {
             const box = document.createElement("div");
             box.className = "box";
