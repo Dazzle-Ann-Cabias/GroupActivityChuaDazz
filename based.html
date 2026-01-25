@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the 1 Orb</title>
+    <link rel="stylesheet" href="design&properties.css">
+</head>
+<body>
+<a href="based.html"></a>
+
+
+<!-- ========================================
+ ================== HOME PAGE ===== ======-->
+<div id="home">
+    <h1 class="metal-title">FIND THE 1 ORB</h1>
+    <p class="metal-subtitle">A Game of luck and Will</p>
+
+    <div class="home-buttons">
+        <button class="metal-btn" onclick="setMode('single')">SINGLE PLAYER</button>
+        <button class="metal-btn" onclick="setMode('dual')">DUAL PLAYER</button>
+        <button class="metal-btn" onclick="openHowTo()">HOW TO PLAY</button>
+    </div>
+</div>
+
+<!-- ========================================
+ ========INFO ON HOW TO PLAY THE GAME===== -->
+<div id="howToOverlay">
+    <h2>How to Play</h2>
+    <div id="howToContent">
+        <p><strong>Easy:</strong> 10 boxes, 1 orb revealed for 1 second. Click the correct box to avoid losing a life.</p>
+        <p><strong>Hard:</strong> 20 boxes, 8 orbs revealed for 0.5 seconds. Click the correct orb to avoid losing a life.</p>
+        <p><strong>Extreme:</strong> 50 boxes, numbers 1–10 hidden. Click all numbered orbs to complete the sequence. Wrong clicks reduce life. First player to 0 lives loses.</p>
+    </div>
+    <button onclick="closeHowTo()">CLOSE</button>
+</div>
+
+<!-- ================================================
+ ===THE PAGE OF THE GAME/ARENA===== -->
+<div id="game">
+    <div class="game-container">
+
+        <h2>Find the 1 Orb</h2>
+
+        <div id="controls">
+            <input id="p1Name" placeholder="Player 1">
+            <input id="p2Name" placeholder="Player 2">
+            <select id="difficulty" onchange="difficultyChanged()">
+                <option value="normal">Easy</option>
+                <option value="hard">Hard</option>
+                <option value="extreme">Extreme</option>
+            </select>
+        </div>
+
+<!--===================================================
+=======THE SCOREBOARD OF THE GAME================== -->
+        <div id="scoreboard">
+            <div id="p1Score"></div>
+            <div id="timer">Time: 2:00</div>
+            <div id="turn">Turn:     Player 1</div>
+            <div id="p2Score"></div>
+        </div>
+<!--=================================================
+====THE ARENA OR THE BORDER OF THE WHOLE GAME===== -->
+        <div id="arena"></div>
+        <div id="message"></div>
+        <div id="gameButtons">
+            <button onclick="restartGame()">RESTART</button>
+     <button onclick="backToHome()">HOME</button>
+</div>
+</div>
+</div>
+
+<!-- ==============================================================
+ ===========DISPLAY/OVERLAY WHEN A PLAYER WINS OR LOSE========== -->
+<div id="winnerOverlay">
+    <h1 id="winnerText">🎉✨ THE SIGMAAAA!!! ✨🎉</h1>
+    <button onclick="closeOverlay()">CLOSE</button>
+</div>
+
+<script src="shibalism.js"></script>
+</body>
+</html>
